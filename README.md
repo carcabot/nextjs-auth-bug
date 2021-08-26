@@ -2,9 +2,9 @@
 
 ![version](https://img.shields.io/badge/version-1.1.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/nextjs-argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-nextjs-argon-dashboard/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
 
-![Bug](bug.png)
+![Bug](./bug.png?raw=true)
 
-![Bug](bug1.png)
+![Bug](./bug1.png?raw=true)
 
 Start your development with a Dashboard for [NextJS](https://nextjs.org/?ref=creativetim), [Bootstrap 4](https://getbootstrap.com/?ref=creativetim), [React](https://reactjs.org/?ref=creativetim) and [Reactstrap](https://reactstrap.github.io/?ref=creativetim). It is open source, free and it features many components that can help you create amazing websites.
 

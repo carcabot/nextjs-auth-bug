@@ -56,7 +56,7 @@ function AdminNavbar() {
             </div>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <div className="alert alert-danger">
+                <div className={`alert alert-${session ? "success" : "danger"}`}>
                   User Status: {session ? "Logged In" : "Unauthenticated"}
                 </div>
               </NavItem>

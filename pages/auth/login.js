@@ -39,7 +39,7 @@ function Login() {
                   signIn("credentials", { redirect: false });
                 }}
                 className="my-4 btn-block"
-                color="success"
+                color="danger"
                 type="button"
               >
                 Login
@@ -53,7 +53,7 @@ function Login() {
                     signOut();
                   }}
                   className="my-4 btn-block"
-                  color="danger"
+                  color="success"
                   type="button"
                 >
                   Logout
