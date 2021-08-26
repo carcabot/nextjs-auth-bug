@@ -6,6 +6,8 @@ import Chart from "chart.js";
 // react plugin used to create charts
 import { Line, Bar } from "react-chartjs-2";
 // reactstrap components
+import { signIn, signOut, useSession } from "next-auth/client";
+
 import {
   Button,
   Card,
@@ -33,9 +35,10 @@ import {
 import Header from "components/Headers/Header.js";
 
 const Dashboard = (props) => {
+  const [session, loading] = useSession();
   const [activeNav, setActiveNav] = React.useState(1);
   const [chartExample1Data, setChartExample1Data] = React.useState("data1");
-
+  console.log(session);
   if (window.Chart) {
     parseOptions(Chart, chartOptions());
   }
@@ -53,6 +56,48 @@ const Dashboard = (props) => {
         <Row>
           <Col className="mb-5 mb-xl-0" xl="8">
             <Card className="shadow">
+              {session && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signOut();
+                  }}
+                >
+                  Logout
+                </button>
+              )}
+              {!session && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signIn("credentials", { redirect: false });
+                  }}
+                >
+                  Sign in
+                </button>
+              )}
+
+              {session && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signOut();
+                  }}
+                >
+                  Logout
+                </button>
+              )}
+              {!session && (
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    signIn("credentials", { redirect: false });
+                  }}
+                >
+                  Sign in
+                </button>
+              )}
+
               <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">

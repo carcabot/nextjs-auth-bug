@@ -2,14 +2,38 @@ import React from "react";
 
 // reactstrap components
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
+import { signIn, signOut, useSession } from "next-auth/client";
 
 function Header() {
+  const [session, loading] = useSession();
+
   return (
     <>
       <div className="header bg-gradient-dark pb-8 pt-5 pt-md-8">
         <Container fluid>
           <div className="header-body">
             {/* Card stats */}
+            {session && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  signOut();
+                }}
+              >
+                Logout
+              </button>
+            )}
+            {!session && (
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  signIn("credentials", { redirect: false });
+                }}
+              >
+                Sign in
+              </button>
+            )}
+
             <Row>
               <Col lg="6" xl="3">
                 <Card className="card-stats mb-4 mb-xl-0">
